@@ -30,9 +30,16 @@
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Department</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="department" value="@Model.studentInfo.department_id" />
+            <select class="form-control" name="department">
+                <option value="">Select Department</option>
+                @foreach (var department in Model.listDepartments)
+                {
+                    <option value="@department.department_id">@department.department_name</option>
+                }
+            </select>
         </div>
     </div>
+
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Nationality</label>
         <div class="col-sm-6">
@@ -54,7 +61,7 @@
 
     <div class="row mb-3">
         <div class="offset-sm-3 col-sm-3 d-grid">
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
         <div class="col-sm-6">
             <a class="btn btn-outline-primary" href="/" role="button">Cancel</a>

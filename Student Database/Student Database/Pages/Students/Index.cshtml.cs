@@ -38,8 +38,6 @@ namespace Student_Database.Pages.Clients
                         }
                     }
                 }
-
-                Console.WriteLine(listStudents[1].id);
             }
             catch (Exception x)
             {
