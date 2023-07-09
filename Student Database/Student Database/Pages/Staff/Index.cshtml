@@ -1,0 +1,39 @@
+﻿@page
+@model Student_Database.Pages.Staff.IndexModel
+@{
+}
+
+<br />
+<h2>List of Staff</h2>
+<a class="btn btn-primary btn-sm" href="/Staff/Create">New Staff</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Nationality</th>
+            <th>Created At</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var element in Model.listStaff)
+        {
+            <tr>
+                <td>@element.id</td>
+                <td>@element.name</td>
+                <td>@element.email</td>
+                <td>@element.department_id</td>
+                <td>@element.nationality</td>
+                <td>@element.created_at</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" href="/Staff/Edit?staff_id=@element.id">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Staff/Delete?staff_id=@element.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

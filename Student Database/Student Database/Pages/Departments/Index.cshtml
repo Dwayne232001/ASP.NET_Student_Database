@@ -1,0 +1,30 @@
+﻿@page
+@model Student_Database.Pages.Departments.IndexModel
+@{
+}
+
+<br />
+<h2>List of Departments</h2>
+<a class="btn btn-primary btn-sm" href="/Departments/Create">New Department</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var element in Model.listDepartments)
+        {
+            <tr>
+                <td>@element.id</td>
+                <td>@element.name</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" href="/Departments/Edit?id=@element.id">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Departments/Delete?id=@element.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
