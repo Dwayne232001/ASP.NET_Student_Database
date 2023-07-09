@@ -21,7 +21,7 @@ I made this to demonstrate my versitility in software development, my openness t
 
 ![App Screenshot](/Images/Screenshot(195).png)
 
-### Student's List Page
+### Student List Page
 
 ![App Screenshot](/Images/Screenshot(196).png)
 
@@ -31,31 +31,31 @@ I made this to demonstrate my versitility in software development, my openness t
 
 ### Edit Student Record Page
 
-![App Screenshot](/Images/Screenshot(208).png)
+![App Screenshot](/Images/Screenshot(209).png)
 
-### Staff's List Page
+### Staff List Page
 
-![App Screenshot](/Images/Screenshot(208).png)
+![App Screenshot](/Images/Screenshot(212).png)
 
-### Staff's Record Creation Page
+### Staff Record Creation Page
 
-![App Screenshot](/Images/Screenshot(208).png)
+![App Screenshot](/Images/Screenshot(217).png)
 
-### Edit Staff's Record Creation Page
+### Edit Staff Record Page
 
-![App Screenshot](/Images/Screenshot(208).png)
+![App Screenshot](/Images/Screenshot(220).png)
 
-### Department's List Page
+### Department List Page
 
 ![App Screenshot](/Images/Screenshot(222).png)
 
-### Department's Record Creation Page
+### Department Record Creation Page
 
 ![App Screenshot](/Images/Screenshot(224).png)
 
-### Department Staff's Record Creation Page
+### Edit Department Record Page
 
-![App Screenshot](/Images/Screenshot(224).png)
+![App Screenshot](/Images/Screenshot(225).png)
 
 ### Privacy Policy Page
 
