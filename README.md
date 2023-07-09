@@ -19,48 +19,47 @@ I made this to demonstrate my versitility in software development, my openness t
 
 ### Home Page
 
-![App Screenshot](https://github.com/Dwayne232001/ASP.NET_Student_Database/blob/master/.jpg?raw=true)
-https://github.com/Dwayne232001/ASP.NET_Student_Database.git
+![App Screenshot](/Images/Screenshot(195))
 
 ### Student's List Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(196))
 
 ### Student Record Creation Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(208))
 
 ### Edit Student Record Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(208))
 
 ### Staff's List Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(208))
 
 ### Staff's Record Creation Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(208))
 
 ### Edit Staff's Record Creation Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(208))
 
 ### Department's List Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(222))
 
 ### Department's Record Creation Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(224))
 
 ### Department Staff's Record Creation Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(224))
 
 ### Privacy Policy Page
 
-![App Screenshot](/Images/)
+![App Screenshot](/Images/Screenshot(226))
 
 
 
