@@ -19,47 +19,47 @@ I made this to demonstrate my versitility in software development, my openness t
 
 ### Home Page
 
-![App Screenshot](/Images/Screenshot(195))
+![App Screenshot](/Images/Screenshot(195).png)
 
 ### Student's List Page
 
-![App Screenshot](/Images/Screenshot(196))
+![App Screenshot](/Images/Screenshot(196).png)
 
 ### Student Record Creation Page
 
-![App Screenshot](/Images/Screenshot(208))
+![App Screenshot](/Images/Screenshot(208).png)
 
 ### Edit Student Record Page
 
-![App Screenshot](/Images/Screenshot(208))
+![App Screenshot](/Images/Screenshot(208).png)
 
 ### Staff's List Page
 
-![App Screenshot](/Images/Screenshot(208))
+![App Screenshot](/Images/Screenshot(208).png)
 
 ### Staff's Record Creation Page
 
-![App Screenshot](/Images/Screenshot(208))
+![App Screenshot](/Images/Screenshot(208).png)
 
 ### Edit Staff's Record Creation Page
 
-![App Screenshot](/Images/Screenshot(208))
+![App Screenshot](/Images/Screenshot(208).png)
 
 ### Department's List Page
 
-![App Screenshot](/Images/Screenshot(222))
+![App Screenshot](/Images/Screenshot(222).png)
 
 ### Department's Record Creation Page
 
-![App Screenshot](/Images/Screenshot(224))
+![App Screenshot](/Images/Screenshot(224).png)
 
 ### Department Staff's Record Creation Page
 
-![App Screenshot](/Images/Screenshot(224))
+![App Screenshot](/Images/Screenshot(224).png)
 
 ### Privacy Policy Page
 
-![App Screenshot](/Images/Screenshot(226))
+![App Screenshot](/Images/Screenshot(226).png)
 
 
 
