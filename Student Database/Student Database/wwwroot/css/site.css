@@ -1,18 +1,64 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    color: #fff; /* Set the default text color to white */
+    background-color: #000; /* Set the background color to a dark shade */
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: #000; /* Set the background color of the body to black */
+}
+
+header,
+nav,
+footer {
+    background-color: #000; /* Set the background color of the header and footer to black */
+    color: #fff; /* Set the text color of the header and footer to white */
+    margin: 0; /* Remove any default margins */
+    padding: 10px;
+}
+
+/* Additional styles for dark theme */
+
+a {
+    color: #fff; /* Set link color to white */
+}
+
+table,tr,th, h2, li, div, a, title, li{
+    color: #fff; /* Set table text color to white */
+}
+
+th {
+    background-color: #333; /* Set table header background color to a darker shade */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Set primary button background color */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Set warning button background color */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Set danger button background color */
+}
+
+/* Styles for div elements */
+
+div {
+    border-radius: 8px; /* Add rounded corners to all div elements */
+    background-color: #333; /* Set background color for div elements */
+    padding: 10px; /* Add padding to div elements */
+    margin-bottom: 10px; /* Add bottom margin to div elements */
 }
