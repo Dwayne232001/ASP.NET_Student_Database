@@ -54,5 +54,8 @@ namespace Student_Database.Pages.Staff
         public string nationality { get; set; }
         public string email { get; set; }
         public string created_at { get; set; }
+        public IFormFile image { get; set; }
+
+        public string ImageBase64 { get; set; }
     }
 }

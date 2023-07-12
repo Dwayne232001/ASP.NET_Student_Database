@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vazni\\Desktop\\DOTNET Workshop\\Student Database\\Student Database\\Student Database.csproj",
+      "projectUniqueName": "C:\\Users\\vazni\\Desktop\\FCC Internship Docs\\FCC Database Project\\Student Database\\Student Database\\Student Database.csproj",
       "projectName": "Student Database",
-      "projectPath": "C:\\Users\\vazni\\Desktop\\DOTNET Workshop\\Student Database\\Student Database\\Student Database.csproj",
+      "projectPath": "C:\\Users\\vazni\\Desktop\\FCC Internship Docs\\FCC Database Project\\Student Database\\Student Database\\Student Database.csproj",
       "packagesPath": "C:\\Users\\vazni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vazni\\Desktop\\DOTNET Workshop\\Student Database\\Student Database\\obj\\",
+      "outputPath": "C:\\Users\\vazni\\Desktop\\FCC Internship Docs\\FCC Database Project\\Student Database\\Student Database\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

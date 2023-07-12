@@ -3,18 +3,40 @@
 @{
 }
 
+<style>
+    .image-preview {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #999;
+    }
+</style>
+
 <br />
 <h2>New Student</h2>
 
-@if(Model.errorMessage.Length > 0)
+@if (Model.errorMessage.Length > 0)
 {
-    <div class="alert alert-warning alertalert-dismissible fade show" role="alert">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>@Model.errorMessage</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 }
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Image</label>
+        <div class="col-sm-6">
+            <div class="image-preview">
+                <span>Image will be displayed here</span>
+            </div>
+            <input type="file" class="form-control mt-3" name="image" accept="image/*" onchange="displayImage(this)" />
+        </div>
+    </div>
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Name</label>
         <div class="col-sm-6">
@@ -27,6 +49,7 @@
             <input type="text" class="form-control" name="email" value="@Model.studentInfo.email" />
         </div>
     </div>
+
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Department</label>
         <div class="col-sm-6">
@@ -34,7 +57,7 @@
                 <option value="">Select Department</option>
                 @foreach (var department in Model.listDepartments)
                 {
-                    <option value="@department.department_id">@department.department_name</option>
+                    <option value="@department.id">@department.name</option>
                 }
             </select>
         </div>
@@ -47,7 +70,7 @@
         </div>
     </div>
 
-    @if(Model.successMessage.Length>0)
+    @if (Model.successMessage.Length > 0)
     {
         <div class="row mb-3">
             <div class="col mb-3">
@@ -68,3 +91,21 @@
         </div>
     </div>
 </form>
+
+<script>
+    function displayImage(input) {
+        var preview = document.querySelector('.image-preview');
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            preview.innerHTML = '<img src="' + e.target.result + '" alt="Image Preview" style="max-width: 100%; max-height: 100%;">';
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.innerHTML = '<span>Image will be displayed here</span>';
+        }
+    }
+</script>

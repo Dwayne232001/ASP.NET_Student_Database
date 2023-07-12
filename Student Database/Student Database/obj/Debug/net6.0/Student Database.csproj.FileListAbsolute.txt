@@ -36,3 +36,79 @@ C:\Users\vazni\Desktop\DOTNET Workshop\Student Database\Student Database\obj\Deb
 C:\Users\vazni\Desktop\DOTNET Workshop\Student Database\Student Database\obj\Debug\net6.0\Student Database.pdb
 C:\Users\vazni\Desktop\DOTNET Workshop\Student Database\Student Database\obj\Debug\net6.0\Student Database.genruntimeconfig.cache
 C:\Users\vazni\Desktop\DOTNET Workshop\Student Database\Student Database\obj\Debug\net6.0\ref\Student Database.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\appsettings.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.staticwebassets.runtime.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.exe
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.deps.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.runtimeconfig.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.pdb
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.csproj.AssemblyReference.cache
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.AssemblyInfoInputs.cache
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.AssemblyInfo.cs
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.csproj.CoreCompileInputs.cache
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.RazorAssemblyInfo.cache
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.RazorAssemblyInfo.cs
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.Student Database.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.build.Student Database.props
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Student Database.props
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Student Database.props
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\scopedcss\bundle\Student Database.styles.css
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\scopedcss\projectbundle\Student Database.bundle.scp.css
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.csproj.CopyComplete
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\refint\Student Database.dll
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.pdb
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.genruntimeconfig.cache
+C:\Users\vazni\Desktop\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\ref\Student Database.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\appsettings.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.staticwebassets.runtime.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.exe
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.deps.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.runtimeconfig.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\Student Database.pdb
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.csproj.AssemblyReference.cache
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.AssemblyInfoInputs.cache
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.AssemblyInfo.cs
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.csproj.CoreCompileInputs.cache
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.RazorAssemblyInfo.cache
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.RazorAssemblyInfo.cs
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.Student Database.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.build.Student Database.props
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Student Database.props
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Student Database.props
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\scopedcss\bundle\Student Database.styles.css
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\scopedcss\projectbundle\Student Database.bundle.scp.css
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.csproj.CopyComplete
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\refint\Student Database.dll
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.pdb
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\Student Database.genruntimeconfig.cache
+C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\obj\Debug\net6.0\ref\Student Database.dll

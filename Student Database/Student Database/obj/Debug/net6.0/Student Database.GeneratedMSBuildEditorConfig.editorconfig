@@ -9,85 +9,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Student_Database
 build_property.RootNamespace = Student_Database
-build_property.ProjectDir = C:\Users\vazni\Desktop\DOTNET Workshop\Student Database\Student Database\
+build_property.ProjectDir = C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\vazni\Desktop\DOTNET Workshop\Student Database\Student Database
+build_property.MSBuildProjectDirectory = C:\Users\vazni\Desktop\FCC Internship Docs\FCC Database Project\Student Database\Student Database
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Departments/Create.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Departments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Departments/Delete.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Departments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Departments/Edit.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Departments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Departments/Index.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Departments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Error.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Index.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Privacy.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Staff/Create.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Staff/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Staff/Delete.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Staff/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Staff/Edit.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Staff/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Staff/Index.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Staff/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Students/Create.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Students/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Students/Delete.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Students/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Students/Edit.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Students/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Students/Index.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/_ViewImports.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/_ViewStart.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vazni/Desktop/DOTNET Workshop/Student Database/Student Database/Pages/Shared/_Layout.cshtml]
+[C:/Users/vazni/Desktop/FCC Internship Docs/FCC Database Project/Student Database/Student Database/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sfzspe4wyt

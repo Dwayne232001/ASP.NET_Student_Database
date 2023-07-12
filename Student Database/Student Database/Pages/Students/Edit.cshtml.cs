@@ -1,32 +1,34 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Student_Database.Pages.Clients;
+using Student_Database.Pages.Departments;
+using Student_Database.Pages.Staff;
 using System.Data.SqlClient;
 
 namespace Student_Database.Pages.Students
 {
     public class EditModel : PageModel
     {
-        public StudentInfo studentInfo= new StudentInfo();
+        public StudentInfo studentInfo = new StudentInfo();
         public List<DepartmentInfo> listDepartments = new List<DepartmentInfo>();
         public String errorMessage = "";
         public String successMessage = "";
 
         public void OnGet()
         {
-            String student_id = Request.Query["student_id"];
-
             try
             {
+                String student_id = Request.Query["student_id"];
                 string connectionString = "Data Source=.\\sqlexpress;Initial Catalog=collegedata;Integrated Security=True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Student WHERE student_id=@student_id";
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    // Code to fetch and display existing student details
+                    string sql = "SELECT * FROM Student WHERE student_id = @student_id";
+                    using (SqlCommand fetchCommand = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@student_id",student_id);
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        fetchCommand.Parameters.AddWithValue("@student_id", student_id);
+                        using (SqlDataReader reader = fetchCommand.ExecuteReader())
                         {
                             while (reader.Read())
                             {
@@ -35,7 +37,8 @@ namespace Student_Database.Pages.Students
                                 studentInfo.department_id = "" + reader.GetInt32(2);
                                 studentInfo.nationality = reader.GetString(3);
                                 studentInfo.email = reader.GetString(4);
-                                studentInfo.created_at = reader.GetDateTime(5).ToString();
+                                byte[] imageData = (byte[])reader["image"];
+                                studentInfo.ImageBase64 = Convert.ToBase64String(imageData);
                             }
                         }
                     }
@@ -47,8 +50,8 @@ namespace Student_Database.Pages.Students
                             while (reader.Read())
                             {
                                 DepartmentInfo departmentInfo = new DepartmentInfo();
-                                departmentInfo.department_id = reader.GetInt32(0);
-                                departmentInfo.department_name = reader.GetString(1);
+                                departmentInfo.id = "" + reader.GetInt32(0);
+                                departmentInfo.name = reader.GetString(1);
                                 listDepartments.Add(departmentInfo);
                             }
                         }
@@ -59,37 +62,78 @@ namespace Student_Database.Pages.Students
             {
                 Console.WriteLine("Exception: " + x.ToString());
             }
-}
+        }
 
-        public void OnPost() 
+        public void OnPost(IFormFile image)
         {
             studentInfo.id = Request.Form["student_id"];
             studentInfo.name = Request.Form["name"];
-            studentInfo.email = Request.Form["email"];
             studentInfo.department_id = Request.Form["department"];
+            studentInfo.email = Request.Form["email"];
             studentInfo.nationality = Request.Form["nationality"];
-            if (studentInfo.name.Length == 0 || studentInfo.email.Length == 0 || studentInfo.department_id.Length == 0 || studentInfo.nationality.Length == 0)
+
+            if (studentInfo.name.Length == 0 || studentInfo.department_id.Length == 0 || studentInfo.email.Length == 0 || studentInfo.nationality.Length == 0)
             {
-                errorMessage = "Enter Data into all Fields";
+                errorMessage = "Enter data into all fields.";
                 return;
             }
 
             try
             {
+                byte[] imageData;
+
+                if (image != null)
+                {
+                    // Convert the image file to a byte array
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        image.CopyTo(memoryStream);
+                        imageData = memoryStream.ToArray();
+                    }
+                }
+                else
+                {
+                    // No image selected, check if there is an existing image
+                    if (!string.IsNullOrEmpty(studentInfo.ImageBase64))
+                    {
+                        // Use the existing image from the database
+                        imageData = Convert.FromBase64String(studentInfo.ImageBase64);
+                    }
+                    else
+                    {
+                        // No image selected and no existing image, set imageData to null or an appropriate default value
+                        imageData = null; // You can modify this line to use an appropriate default image if needed
+                    }
+                }
+
+                // SQL code to update student info and image in the database
                 string connectionString = "Data Source=.\\sqlexpress;Initial Catalog=collegedata;Integrated Security=True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string sql = "UPDATE Student " +
-                                "SET student_name=@student_name, department_id=@department_id, nationality=@nationality, email=@email " +
-                                "WHERE student_id=@student_id";
+                                 "SET student_name = @student_name, department_id=@department_id, email = @email, nationality = @nationality";
+
+                    if (imageData != null)
+                    {
+                        sql += ", image = @image";
+                    }
+
+                    sql += " WHERE student_id = @student_id";
+
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@student_id", studentInfo.id);
                         command.Parameters.AddWithValue("@student_name", studentInfo.name);
-                        command.Parameters.AddWithValue("@email", studentInfo.email);
                         command.Parameters.AddWithValue("@department_id", studentInfo.department_id);
+                        command.Parameters.AddWithValue("@email", studentInfo.email);
                         command.Parameters.AddWithValue("@nationality", studentInfo.nationality);
+
+                        if (imageData != null)
+                        {
+                            command.Parameters.AddWithValue("@image", imageData);
+                        }
+
                         command.ExecuteNonQuery();
                     }
                 }
@@ -100,7 +144,15 @@ namespace Student_Database.Pages.Students
                 return;
             }
 
+            studentInfo.name = "";
+            studentInfo.email = "";
+            studentInfo.department_id = "";
+            studentInfo.nationality = "";
+            successMessage = "Data Successfully Updated in the Database";
+
             Response.Redirect("/Students/Index");
         }
+
+
     }
 }

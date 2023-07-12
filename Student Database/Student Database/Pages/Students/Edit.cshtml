@@ -1,7 +1,18 @@
 ﻿@page
 @model Student_Database.Pages.Students.EditModel
-@{
-}
+
+<style>
+    .image-preview {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #999;
+    }
+</style>
 
 <br />
 <h2>Edit Student</h2>
@@ -14,8 +25,24 @@
     </div>
 }
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <input type="hidden" name="student_id" value="@Model.studentInfo.id" />
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Image</label>
+        <div class="col-sm-6">
+            <div class="image-preview">
+                @if (!String.IsNullOrEmpty(Model.studentInfo.ImageBase64))
+                {
+                    <img src="data:image/png;base64,@Model.studentInfo.ImageBase64" alt="Image Preview" style="max-width: 100%; max-height: 100%;">
+                }
+                else
+                {
+                    <span>Image will be displayed here</span>
+                }
+            </div>
+            <input type="file" class="form-control mt-3" name="image" accept="image/*" onchange="displayImage(this)" />
+        </div>
+    </div>
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Name</label>
         <div class="col-sm-6">
@@ -28,6 +55,7 @@
             <input type="text" class="form-control" name="email" value="@Model.studentInfo.email" />
         </div>
     </div>
+
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Department</label>
         <div class="col-sm-6">
@@ -35,10 +63,9 @@
                 <option value="">Select Department</option>
                 @foreach (var department in Model.listDepartments)
                 {
-                    <option value="@department.department_id" selected="@(department.department_id.ToString() == Model.studentInfo.department_id)">@department.department_name</option>
+                    <option value="@department.id" selected="@(department.id.ToString() == Model.studentInfo.department_id)">@department.name</option>
                 }
             </select>
-
         </div>
     </div>
 
@@ -63,10 +90,26 @@
 
     <div class="row mb-3">
         <div class="offset-sm-3 col-sm-3 d-grid">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </div>
         <div class="col-sm-6">
             <a class="btn btn-outline-primary" href="/Students/Index" role="button">Cancel</a>
         </div>
     </div>
 </form>
+
+<script>
+    function displayImage(input) {
+        var preview = document.querySelector('.image-preview');
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            preview.innerHTML = '<img src="' + e.target.result + '" alt="Image Preview" style="max-width: 100%; max-height: 100%;">';
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
