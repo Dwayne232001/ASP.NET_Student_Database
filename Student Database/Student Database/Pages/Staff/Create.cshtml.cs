@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Student_Database.Pages.Clients;
 using Student_Database.Pages.Departments;
 using Student_Database.Pages.Students;
+using System;
 using System.Data.SqlClient;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -52,10 +53,38 @@ namespace Student_Database.Pages.Staff
             staffInfo.email = Request.Form["email"];
             staffInfo.department_id = Request.Form["department"];
             staffInfo.nationality = Request.Form["nationality"];
+            // Retrieve the new field values
+            staffInfo.date_of_birth = DateTime.Parse(Request.Form["date_of_birth"]);
+            staffInfo.joining_date = DateTime.Parse(Request.Form["joining_date"]);
+            staffInfo.salary = decimal.Parse(Request.Form["salary"]);
 
             if (staffInfo.name.Length == 0 || staffInfo.email.Length == 0 || staffInfo.department_id.Length == 0 || staffInfo.nationality.Length == 0 || image == null)
             {
                 errorMessage = "Enter data into all fields and select an image.";
+                return;
+            }
+
+            if (staffInfo.salary < 0)
+            {
+                errorMessage = "Salary cannot be less than zero.";
+                return;
+            }
+
+            // Calculate age
+            TimeSpan age_at_joining = staffInfo.joining_date - staffInfo.date_of_birth;
+            int years = (int)(age_at_joining.TotalDays / 365.25);
+
+            // Validate age
+            if (years < 18)
+            {
+                errorMessage = "Staff member must be at least 18 years old.";
+                return;
+            }
+
+            // Validate joining date
+            if (staffInfo.joining_date < staffInfo.date_of_birth || staffInfo.joining_date > DateTime.Today)
+            {
+                errorMessage = "Joining date is erroneous, please double check the dates.";
                 return;
             }
 
@@ -87,8 +116,8 @@ namespace Student_Database.Pages.Staff
                     }
                     int newStaffId = maxId.HasValue ? maxId.Value + 1 : 1; // Set initial staff_id to 1 if maxId is null
                     string sql = "INSERT INTO Staff " +
-                                 "(staff_id, staff_name, department_id, nationality, email, image) " +
-                                 "VALUES (@staff_id, @staff_name, @department_id, @nationality, @email, @image)";
+                                 "(staff_id, staff_name, department_id, nationality, email, image, date_of_birth, joining_date, salary) " +
+                                 "VALUES (@staff_id, @staff_name, @department_id, @nationality, @email, @image, @date_of_birth, @joining_date, @salary)";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@staff_id", newStaffId);
@@ -97,6 +126,9 @@ namespace Student_Database.Pages.Staff
                         command.Parameters.AddWithValue("@department_id", staffInfo.department_id);
                         command.Parameters.AddWithValue("@nationality", staffInfo.nationality);
                         command.Parameters.AddWithValue("@image", imageData);
+                        command.Parameters.AddWithValue("@date_of_birth", staffInfo.date_of_birth);
+                        command.Parameters.AddWithValue("@joining_date", staffInfo.joining_date);
+                        command.Parameters.AddWithValue("@salary", staffInfo.salary);
                         command.ExecuteNonQuery();
                     }
                 }
@@ -112,6 +144,8 @@ namespace Student_Database.Pages.Staff
             staffInfo.email = "";
             staffInfo.department_id = "";
             staffInfo.nationality = "";
+            staffInfo.date_of_birth = DateTime.Today;
+            staffInfo.joining_date = DateTime.Today;
             successMessage = "Data Successfully Entered into the DataBase";
 
             Response.Redirect("/Staff/Index");

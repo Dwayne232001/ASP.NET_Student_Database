@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Student_Database.Pages.Clients;
 using Student_Database.Pages.Departments;
+using Student_Database.Pages.Staff;
 using System.Data.SqlClient;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -51,10 +52,30 @@ namespace Student_Database.Pages.Students
             studentInfo.email = Request.Form["email"];
             studentInfo.department_id = Request.Form["department"];
             studentInfo.nationality = Request.Form["nationality"];
+            studentInfo.date_of_birth = DateTime.Parse(Request.Form["date_of_birth"]);
+            studentInfo.joining_date = DateTime.Parse(Request.Form["joining_date"]);
 
             if (studentInfo.name.Length == 0 || studentInfo.email.Length == 0 || studentInfo.nationality.Length == 0 || image == null)
             {
                 errorMessage = "Enter data into all fields and select an image.";
+                return;
+            }
+
+            // Calculate age
+            TimeSpan age_at_joining = studentInfo.joining_date - studentInfo.date_of_birth;
+            int years = (int)(age_at_joining.TotalDays / 365.25);
+
+            // Validate age
+            if (years < 18)
+            {
+                errorMessage = "Student must be at least 18 years old.";
+                return;
+            }
+
+            // Validate joining date
+            if (studentInfo.joining_date < studentInfo.date_of_birth || studentInfo.joining_date > DateTime.Today)
+            {
+                errorMessage = "Joining date is erroneous, please double check the dates.";
                 return;
             }
 
@@ -86,8 +107,8 @@ namespace Student_Database.Pages.Students
                     }
                     int newStudentId = maxId.HasValue ? maxId.Value + 1 : 1; // Set initial student_id to 1 if maxId is null
                     string sql = "INSERT INTO Student " +
-                                 "(student_id, student_name, department_id,email, nationality, image) " +
-                                 "VALUES (@student_id, @student_name, @department_id, @email, @nationality, @image)";
+                                 "(student_id, student_name, department_id,email, nationality, image, date_of_birth, joining_date) " +
+                                 "VALUES (@student_id, @student_name, @department_id, @email, @nationality, @image, @date_of_birth, @joining_date)";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@student_id", newStudentId);
@@ -96,6 +117,8 @@ namespace Student_Database.Pages.Students
                         command.Parameters.AddWithValue("@department_id", studentInfo.department_id);
                         command.Parameters.AddWithValue("@nationality", studentInfo.nationality);
                         command.Parameters.AddWithValue("@image", imageData);
+                        command.Parameters.AddWithValue("@date_of_birth", studentInfo.date_of_birth);
+                        command.Parameters.AddWithValue("@joining_date", studentInfo.joining_date);
                         command.ExecuteNonQuery();
                     }
                 }
@@ -109,8 +132,11 @@ namespace Student_Database.Pages.Students
 
             studentInfo.name = "";
             studentInfo.email = "";
+            studentInfo.department_id = "";
             studentInfo.nationality = "";
             successMessage = "Data Successfully Entered into the Database";
+            studentInfo.date_of_birth = DateTime.Today;
+            studentInfo.joining_date = DateTime.Today;
 
             Response.Redirect("/Students/Index");
         }

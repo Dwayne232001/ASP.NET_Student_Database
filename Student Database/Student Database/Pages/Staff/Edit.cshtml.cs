@@ -39,6 +39,9 @@ namespace Student_Database.Pages.Staff
                                 staffInfo.email = reader.GetString(4);
                                 byte[] imageData = (byte[])reader["image"];
                                 staffInfo.ImageBase64 = Convert.ToBase64String(imageData);
+                                staffInfo.date_of_birth = reader.GetDateTime(7);
+                                staffInfo.joining_date = reader.GetDateTime(8);
+                                staffInfo.salary = reader.GetDecimal(9);
                             }
                         }
                     }
@@ -71,10 +74,37 @@ namespace Student_Database.Pages.Staff
             staffInfo.email = Request.Form["email"];
             staffInfo.department_id = Request.Form["department"];
             staffInfo.nationality = Request.Form["nationality"];
+            staffInfo.date_of_birth = DateTime.Parse(Request.Form["date_of_birth"]);
+            staffInfo.joining_date = DateTime.Parse(Request.Form["joining_date"]);
+            staffInfo.salary = decimal.Parse(Request.Form["salary"]);
 
             if (staffInfo.name.Length == 0 || staffInfo.email.Length == 0 || staffInfo.department_id.Length == 0 || staffInfo.nationality.Length == 0)
             {
                 errorMessage = "Enter data into all fields.";
+                return;
+            }
+
+            if (staffInfo.salary < 0)
+            {
+                errorMessage = "Salary cannot be less than zero.";
+                return;
+            }
+
+            // Calculate age
+            TimeSpan age_at_joining = staffInfo.joining_date - staffInfo.date_of_birth;
+            int years = (int)(age_at_joining.TotalDays / 365.25);
+
+            // Validate age
+            if (years < 18)
+            {
+                errorMessage = "Staff member must be at least 18 years old.";
+                return;
+            }
+
+            // Validate joining date
+            if (staffInfo.joining_date < staffInfo.date_of_birth || staffInfo.joining_date > DateTime.Today)
+            {
+                errorMessage = "Joining date is erroneous, please double check the dates.";
                 return;
             }
 
@@ -112,7 +142,7 @@ namespace Student_Database.Pages.Staff
                 {
                     connection.Open();
                     string sql = "UPDATE Staff " +
-                     "SET staff_name = @staff_name, department_id = @department_id, nationality = @nationality, email = @email";
+                     "SET staff_name = @staff_name, department_id = @department_id, nationality = @nationality, email = @email, date_of_birth=@date_of_birth, joining_date=@joining_date, salary=@salary";
 
                     if (imageData != null)
                     {
@@ -128,7 +158,10 @@ namespace Student_Database.Pages.Staff
                         command.Parameters.AddWithValue("@email", staffInfo.email);
                         command.Parameters.AddWithValue("@department_id", staffInfo.department_id);
                         command.Parameters.AddWithValue("@nationality", staffInfo.nationality);
-                        if(imageData != null)
+                        command.Parameters.AddWithValue("@date_of_birth", staffInfo.date_of_birth);
+                        command.Parameters.AddWithValue("@joining_date", staffInfo.joining_date);
+                        command.Parameters.AddWithValue("@salary", staffInfo.salary);
+                        if (imageData != null)
                         {
                             command.Parameters.AddWithValue("@image", imageData);
                         }
@@ -147,6 +180,8 @@ namespace Student_Database.Pages.Staff
             staffInfo.email = "";
             staffInfo.department_id = "";
             staffInfo.nationality = "";
+            staffInfo.date_of_birth = DateTime.Today;
+            staffInfo.joining_date = DateTime.Today;
             successMessage = "Data Successfully Entered into the DataBase";
 
             Response.Redirect("/Staff/Index");

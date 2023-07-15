@@ -39,6 +39,8 @@ namespace Student_Database.Pages.Students
                                 studentInfo.email = reader.GetString(4);
                                 byte[] imageData = (byte[])reader["image"];
                                 studentInfo.ImageBase64 = Convert.ToBase64String(imageData);
+                                studentInfo.date_of_birth = reader.GetDateTime(7);
+                                studentInfo.joining_date = reader.GetDateTime(8);
                             }
                         }
                     }
@@ -71,10 +73,30 @@ namespace Student_Database.Pages.Students
             studentInfo.department_id = Request.Form["department"];
             studentInfo.email = Request.Form["email"];
             studentInfo.nationality = Request.Form["nationality"];
+            studentInfo.date_of_birth = DateTime.Parse(Request.Form["date_of_birth"]);
+            studentInfo.joining_date = DateTime.Parse(Request.Form["joining_date"]);
 
             if (studentInfo.name.Length == 0 || studentInfo.department_id.Length == 0 || studentInfo.email.Length == 0 || studentInfo.nationality.Length == 0)
             {
                 errorMessage = "Enter data into all fields.";
+                return;
+            }
+
+            // Calculate age
+            TimeSpan age_at_joining = studentInfo.joining_date - studentInfo.date_of_birth;
+            int years = (int)(age_at_joining.TotalDays / 365.25);
+
+            // Validate age
+            if (years < 18)
+            {
+                errorMessage = "Staff member must be at least 18 years old.";
+                return;
+            }
+
+            // Validate joining date
+            if (studentInfo.joining_date < studentInfo.date_of_birth || studentInfo.joining_date > DateTime.Today)
+            {
+                errorMessage = "Joining date is erroneous, please double check the dates.";
                 return;
             }
 
@@ -112,7 +134,7 @@ namespace Student_Database.Pages.Students
                 {
                     connection.Open();
                     string sql = "UPDATE Student " +
-                                 "SET student_name = @student_name, department_id=@department_id, email = @email, nationality = @nationality";
+                                 "SET student_name = @student_name, department_id=@department_id, email = @email, nationality = @nationality, date_of_birth=@date_of_birth, joining_date=@joining_date";
 
                     if (imageData != null)
                     {
@@ -128,6 +150,8 @@ namespace Student_Database.Pages.Students
                         command.Parameters.AddWithValue("@department_id", studentInfo.department_id);
                         command.Parameters.AddWithValue("@email", studentInfo.email);
                         command.Parameters.AddWithValue("@nationality", studentInfo.nationality);
+                        command.Parameters.AddWithValue("@date_of_birth", studentInfo.date_of_birth);
+                        command.Parameters.AddWithValue("@joining_date", studentInfo.joining_date);
 
                         if (imageData != null)
                         {
@@ -148,6 +172,8 @@ namespace Student_Database.Pages.Students
             studentInfo.email = "";
             studentInfo.department_id = "";
             studentInfo.nationality = "";
+            studentInfo.date_of_birth = DateTime.Today;
+            studentInfo.joining_date = DateTime.Today;
             successMessage = "Data Successfully Updated in the Database";
 
             Response.Redirect("/Students/Index");

@@ -6,6 +6,19 @@
 <br />
 <h2>List of Staff</h2>
 <a class="btn btn-primary btn-sm" href="/Staff/Create">New Staff</a>
+
+<form method="get" action="/Students/Index">
+    <br />
+    <label for="fromDate">Join Date From:</label>
+    <input type="date" id="fromDate" name="fromDate" value="@ViewData["FromDate"]" />
+
+    <label for="toDate">To:</label>
+    <input type="date" id="toDate" name="toDate" value="@ViewData["ToDate"]" />
+
+    <input type="submit" value="Filter" class="btn btn-primary btn-sm" />
+</form>
+
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -14,6 +27,9 @@
             <th>Email</th>
             <th>Department</th>
             <th>Nationality</th>
+            <th>Join Date</th>
+            <th>Date of Birth</th>
+            <th>Salary</th>
             <th>Created At</th>
             <th>Action</th>
         </tr>
@@ -27,6 +43,9 @@
                 <td>@element.email</td>
                 <td>@element.department_id</td>
                 <td>@element.nationality</td>
+                <td>@element.joining_date.ToString("dd-MM-yyyy")</td>
+                <td>@element.date_of_birth.ToString("dd-MM-yyyy")</td>
+                <td>@element.salary</td>
                 <td>@element.created_at</td>
                 <td>
                     <a class="btn btn-warning btn-sm" href="/Staff/Edit?staff_id=@element.id">Edit</a>

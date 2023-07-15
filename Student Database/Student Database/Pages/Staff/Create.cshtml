@@ -69,6 +69,28 @@
                 </div>
             </div>
 
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Date of Birth</label>
+                <div class="col-sm-6">
+                    <input type="date" class="form-control" name="date_of_birth" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Joining Date</label>
+                <div class="col-sm-6">
+                    <input type="date" class="form-control" name="joining_date" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Salary</label>
+                <div class="col-sm-6">
+            <input type="number" class="form-control" name="salary" value="@Model.staffInfo.salary.ToString("0.00")" />
+                </div>
+            </div>
+
+
             @if (Model.successMessage.Length > 0)
             {
                 <div class="row mb-3">
