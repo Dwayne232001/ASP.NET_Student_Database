@@ -1,0 +1,96 @@
+﻿@page
+@model Student_Database.Pages.Students.ViewModel
+
+<style>
+    .image-preview {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #999;
+    }
+</style>
+
+<br />
+<h2>View Student</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alertalert-dismissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Image</label>
+    <div class="col-sm-6">
+        <div class="image-preview">
+            @if (!String.IsNullOrEmpty(Model.studentInfo.ImageBase64))
+            {
+                <img src="data:image/png;base64,@Model.studentInfo.ImageBase64" alt="Image Preview" style="max-width: 100%; max-height: 100%;">
+            }
+            else
+            {
+                <span>Image will be displayed here</span>
+            }
+        </div>
+    </div>
+</div>
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Name</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" name="name" value="@Model.studentInfo.name" readonly/>
+    </div>
+</div>
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Email</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" name="email" value="@Model.studentInfo.email" readonly/>
+    </div>
+</div>
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Department</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" name="department" value="@Model.studentInfo.department_name" readonly />
+    </div>
+</div>
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Nationality</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" name="nationality" value="@Model.studentInfo.nationality" readonly />
+    </div>
+</div>
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Date of Birth</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" name="date_of_birth" value="@Model.studentInfo.date_of_birth.ToString("dd-MM-yyyy")" readonly />
+    </div>
+</div>
+<div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Joining Date</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control" name="joining_date" value="@Model.studentInfo.joining_date.ToString("dd-MM-yyyy")" readonly /
+    </div>
+</div>
+
+@if (Model.successMessage.Length > 0)
+{
+    <div class="row mb-3">
+        <div class="col mb-3">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row mb-3">
+    <div class="offset-sm-3 col-sm-6">
+        <a class="btn btn-outline-primary" href="/Students/Index" role="button">Back to List</a>
+    </div>
+</div>

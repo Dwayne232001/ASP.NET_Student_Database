@@ -82,5 +82,6 @@ namespace Student_Database.Pages.Clients
         public string ImageBase64 { get; set; }
         public DateTime date_of_birth { get; set; }
         public DateTime joining_date { get; set; }
+        public string department_name { get; set; }
     }
 }

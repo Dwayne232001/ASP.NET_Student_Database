@@ -7,7 +7,7 @@
 <h2>List of Staff</h2>
 <a class="btn btn-primary btn-sm" href="/Staff/Create">New Staff</a>
 
-<form method="get" action="/Students/Index">
+<form method="get" action="/Staff/Index">
     <br />
     <label for="fromDate">Join Date From:</label>
     <input type="date" id="fromDate" name="fromDate" value="@ViewData["FromDate"]" />
@@ -48,6 +48,7 @@
                 <td>@element.salary</td>
                 <td>@element.created_at</td>
                 <td>
+                    <a class="btn btn-info btn-sm" href="/Staff/View?staff_id=@element.id">View</a>
                     <a class="btn btn-warning btn-sm" href="/Staff/Edit?staff_id=@element.id">Edit</a>
                     <a class="btn btn-danger btn-sm" href="/Staff/Delete?staff_id=@element.id">Delete</a>
                 </td>

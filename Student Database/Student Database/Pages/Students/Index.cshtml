@@ -46,6 +46,7 @@
                 <td>@element.date_of_birth.ToString("dd-MM-yyyy")</td>
                 <td>@element.created_at</td>
                 <td>
+                    <a class="btn btn-info btn-sm" href="/Students/View?student_id=@element.id">View</a>
                     <a class="btn btn-warning btn-sm" href="/Students/Edit?student_id=@element.id">Edit</a>
                     <a class="btn btn-danger btn-sm" href="/Students/Delete?student_id=@element.id">Delete</a>
                 </td>

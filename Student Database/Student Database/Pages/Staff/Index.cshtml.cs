@@ -87,5 +87,6 @@ namespace Student_Database.Pages.Staff
         public DateTime date_of_birth { get; set; }
         public DateTime joining_date { get; set; }
         public decimal salary { get; set; }
+        public string department_name { get; set; }
     }
 }
